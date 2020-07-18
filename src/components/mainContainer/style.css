@@ -1,0 +1,37 @@
+.mainContainer{
+    height: 100vh !important;
+    width: 100% !important;
+    background-color: rgb(100, 100, 100);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.logoFlex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 15%;
+    width: 100%;
+    margin-bottom: auto;
+    border-bottom: 1px solid wheat;
+    position: relative;
+}
+.logo{
+    height: 75%;
+    width: 5%;
+    margin-top: 0.5rem;
+    left: 0;
+    position: absolute;
+
+}
+.logo2{
+    height: 75%;
+    width: 5%;
+    /* margin-left: 85%; */
+    text-align: right;
+    right: 0;
+    position: absolute;
+    margin-top: 0.5rem;
+    
+    
+  }
