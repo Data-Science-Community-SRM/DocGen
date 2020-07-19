@@ -9,6 +9,8 @@ html, body {
 	color: #444;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	--mainTheme: rgb(234, 118, 250);
+	--btnHover: rgb(119, 45, 129);
 }
 
 * {
@@ -17,4 +19,21 @@ html, body {
 
 #app {
 	height: 100%;
+}
+.primary{
+	color: white;
+}
+.heading1{
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+.heading2{
+	font-size: 0.9rem;
+}
+.semibold{
+	font-weight: 800;
+}
+.link{
+	cursor: pointer;
+	text-decoration: underline;
 }

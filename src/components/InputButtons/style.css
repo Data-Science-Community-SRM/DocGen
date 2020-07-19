@@ -1,0 +1,26 @@
+.inButtons{
+    background-color: rgb(100, 100, 100);
+    width: 7rem;
+    height: 2rem;
+    color: white;
+    border: 1px solid var(--mainTheme);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none;
+        -ms-user-select: none; 
+            user-select: none; 
+    
+}
+.innerText{
+    margin:auto;
+    font-size: 0.8rem;
+}
+.inButtons:hover{
+    background-color: var(--btnHover);
+}

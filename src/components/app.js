@@ -2,7 +2,7 @@ import { h, Component } from 'preact';
 import { Router } from 'preact-router';
 
 import Header from './header';
-import style from '../style/index.css'
+import '../style/index.css'
 
 // Code-splitting is automated for routes
 import Home from '../routes/home';
