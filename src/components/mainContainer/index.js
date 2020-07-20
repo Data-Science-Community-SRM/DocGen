@@ -1,7 +1,7 @@
 
  import style from './style.css';
- import InputButton from '../InputButtons'
- 
+ import InputButton from '../InputButtons';
+ import DownloadButton from '../DownloadButton';
  var imageName ='assets/dslogo.png'
 
 
@@ -25,6 +25,7 @@ const mainContainer = ()=>(
                             <InputButton name="Default Page"/>
                             <InputButton name="Upload Page"/>
                             <InputButton name="Upload Font"/>
+                          
                         </div>
                         
                     </div>
@@ -34,7 +35,9 @@ const mainContainer = ()=>(
                         Output
                     </div>
                     <div class={style.outputDisplay}>
-
+                    <div class={style.downloadbtnDisplay}>
+                    <DownloadButton name="Download Page"/>
+                    </div>
                     </div>
                 </div>
             </div>
