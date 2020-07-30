@@ -1,8 +1,6 @@
 import { useRef } from "react";
 import DomToImage from "dom-to-image";
 
-import bg from "../../assets/paper.png";
-
 const OutputComponent = ({ bodyValues, headValues }) => {
   const outputPage = useRef(null);
 

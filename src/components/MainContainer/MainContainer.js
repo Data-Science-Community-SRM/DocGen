@@ -7,20 +7,20 @@ import Output from "../OutputComponent/Output";
 import imageName from "../../assets/dslogo.png";
 
 const MainContainer = () => {
-  const [bodyFormData, setBodyFormData] = useState({
-    bodySize: 16,
-    bodyFont: "'Helvetica Neue', arial, sans-serif",
-    bodyLeft: 0,
-    bodyTop: 100,
-    bodyLine: 2,
+  const [headFormData, setHeadFormData] = useState({
+    headSize: null,
+    headFont: null,
+    headLeft: null,
+    headTop: null,
+    headLine: null,
   });
 
-  const [headFormData, setHeadFormData] = useState({
-    headSize: 32,
-    headFont: "'Helvetica Neue', arial, sans-serif",
-    headLeft: 0,
-    headTop: 0,
-    headLine: 1,
+  const [bodyFormData, setBodyFormData] = useState({
+    bodySize: null,
+    bodyFont: null,
+    bodyLeft: null,
+    bodyTop: 100,
+    bodyLine: null,
   });
 
   const [isBody, setIsBody] = useState(true);
@@ -60,7 +60,7 @@ const MainContainer = () => {
         <div class={`col-6`}>
           <h1 class="heading1 primary">Customisations</h1>
           <div class={style.optionsContainer}>
-            <div class="heading2 primary">Page Options</div>
+            <h3 class="heading2 primary">Page Options</h3>
             <div class={style.optionsInnerContainer}>
               <div>
                 <form class={style.form}>
