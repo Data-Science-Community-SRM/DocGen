@@ -1,9 +1,7 @@
 import { useState } from "react";
 
 import style from "./MainContainer.css";
-import InputButton from "../Buttons/InputButton/InputBtn";
 import DownloadButton from "../Buttons/DownloadButton/DownloadBtn";
-import RoundButton from "../Buttons/RoundButton/RoundBtn";
 import Output from "../OutputComponent/Output";
 
 import imageName from "../../assets/dslogo.png";
@@ -13,8 +11,8 @@ const MainContainer = () => {
     bodySize: 16,
     bodyFont: "'Helvetica Neue', arial, sans-serif",
     bodyLeft: 0,
-    bodyTop: 0,
-    bodyLine: 1,
+    bodyTop: 100,
+    bodyLine: 2,
   });
 
   const [headFormData, setHeadFormData] = useState({
@@ -40,8 +38,26 @@ const MainContainer = () => {
 
   return (
     <>
-      <div class={`${style.mainContainer} ${style.ioFlex}`}>
-        <div class={style.iFlex}>
+      <div class={`row col-12`}>
+        <div class={`col-6`}>
+          <h1 class="heading1 primary">Input</h1>
+          <div class={style.outputDisplay}>
+            <div
+              style={{
+                overflow: "hidden",
+                height: "100%",
+                width: "100%",
+              }}
+            >
+              <Output
+                bodyValues={bodyFormData}
+                headValues={headFormData}
+                bgImage={imageName}
+              />
+            </div>
+          </div>
+        </div>
+        <div class={`col-6`}>
           <h1 class="heading1 primary">Customisations</h1>
           <div class={style.optionsContainer}>
             <div class="heading2 primary">Page Options</div>
@@ -104,7 +120,9 @@ const MainContainer = () => {
                         min="30"
                         max="200"
                         name={isBody ? "bodyTop" : "headTop"}
-                        value={isBody ? bodyFormData.bodyTop : headFormData}
+                        value={
+                          isBody ? bodyFormData.bodyTop : headFormData.headTop
+                        }
                         className="form-control"
                         id="top"
                         onChange={onValueChange}
@@ -133,20 +151,6 @@ const MainContainer = () => {
               <div class={style.downloadbtn}>
                 <DownloadButton name="Download Page" />
               </div>
-            </div>
-          </div>
-        </div>
-        <div class={style.oFlex}>
-          <div class="heading1 primary">Input</div>
-          <div class={style.outputDisplay}>
-            <div
-              style={{
-                background: "../../assets/dslogo.png",
-                overflow: "hidden",
-                width: "100%",
-              }}
-            >
-              <Output text_value={bodyFormData} head_value={headFormData} />
             </div>
           </div>
         </div>

@@ -1,8 +1,9 @@
-import { useRef, Fragment } from "react";
-
+import { useRef } from "react";
 import DomToImage from "dom-to-image";
 
-const OutputComponent = ({ text_value, head_value }) => {
+import bg from "../../assets/paper.png";
+
+const OutputComponent = ({ bodyValues, headValues }) => {
   const outputPage = useRef(null);
 
   const getImg = (e) => {
@@ -29,46 +30,55 @@ const OutputComponent = ({ text_value, head_value }) => {
   }
 
   return (
-    <Fragment>
-      <div
-        ref={outputPage}
-        style={{
-          position: "relative",
-          height: "100%",
-          width: "100%",
-        }}
-      >
-        <h1
+    <>
+      <div ref={outputPage}>
+        <div
           style={{
-            fontSize: `${head_value.headSize}px`,
-            marginTop: `${head_value.headTop}px`,
-            marginLeft: `${head_value.headLeft}px`,
-            fontFamily: `${text_value.headFont}`,
+            position: "relative",
+            backgroundImage: "url(../../assets/paper.png",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            height: "942px",
+            width: "595px",
           }}
         >
-          Tom Riddle's Diary
-        </h1>
-        <p
-          style={{
-            fontSize: `${text_value.bodySize}px`,
-            marginTop: `${text_value.bodyTop}px`,
-            marginLeft: `${text_value.bodyLeft}px`,
-            fontFamily: `${text_value.bodyFont}px`,
-          }}
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut orci
-          ligula. Cras vehicula mi sit amet porta lobortis. Morbi vel ultrices
-          elit, quis lobortis eros. Phasellus hendrerit ex sed tempus aliquam.
-          Fusce scelerisque, sem vel tristique hendrerit, urna erat eleifend
-          est, vitae cursus tellus tellus at massa. In et malesuada ipsum.
-          Nullam commodo tellus vitae blandit fringilla. Donec vestibulum luctus
-          tellus, non malesuada turpis luctus vitae. Fusce ac nisi vitae dolor
-          egestas aliquet eget in ligula. Nunc in tempus ligula, non commodo
-          neque.
-        </p>
+          <h1
+            style={{
+              position: "absolute",
+              fontSize: `${headValues.headSize}px`,
+              top: `${headValues.headTop}px`,
+              left: `${headValues.headLeft}px`,
+              fontFamily: `${headValues.headFont}`,
+            }}
+          >
+            Tom Riddle's Diary
+          </h1>
+          <p
+            style={{
+              position: "absolute",
+              fontSize: `${bodyValues.bodySize}px`,
+              top: `${bodyValues.bodyTop}px`,
+              left: `${bodyValues.bodyLeft}px`,
+              lineHeight: `${bodyValues.bodyLine}rem`,
+              fontFamily: `${bodyValues.bodyFont}px`,
+            }}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut orci
+            ligula. Cras vehicula mi sit amet porta lobortis. Morbi vel ultrices
+            elit, quis lobortis eros. Phasellus hendrerit ex sed tempus aliquam.
+            Fusce scelerisque, sem vel tristique hendrerit, urna erat eleifend
+            est, vitae cursus tellus tellus at massa. In et malesuada ipsum.
+            Nullam commodo tellus vitae blandit fringilla. Donec vestibulum
+            luctus tellus, non malesuada turpis luctus vitae. Fusce ac nisi
+            vitae dolor egestas aliquet eget in ligula. Nunc in tempus ligula,
+            non commodo neque.
+          </p>
+        </div>
       </div>
-      <button onClick={getImg}>Download Png</button>
-    </Fragment>
+      <button onClick={getImg} style={{ position: "fixed", bottom: "0px" }}>
+        Download Png
+      </button>
+    </>
   );
 };
 export default OutputComponent;
