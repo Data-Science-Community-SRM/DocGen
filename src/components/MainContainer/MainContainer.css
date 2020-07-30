@@ -1,6 +1,3 @@
-body{
-  color: #fafafa;
-}
 .mainContainer {
   height: 100% !important;
   width: 100% !important;
@@ -118,9 +115,9 @@ body{
   .paper {
     height: 59%;
     width: 23%;
-position: absolute;
-left: 8.5%;
-top: 27%;
+    position: absolute;
+    left: 8.5%;
+    top: 27%;
   }
   footer {
     color: white;
@@ -130,9 +127,7 @@ top: 27%;
     margin-right: 2%;
     font-weight: 200;
   }
-
 }
-
 
 @media only screen and (max-width: 756px) {
   .ioFlex {
@@ -202,10 +197,9 @@ top: 27%;
     font-weight: 200;
   }
 }
-.inputborder{
+.inputborder {
   border: 2px solid var(--mainTheme);
- 
 }
-.form{
+.form {
   font-size: 1.3rem;
 }

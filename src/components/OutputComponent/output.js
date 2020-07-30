@@ -1,24 +1,25 @@
-import { useRef, Fragment } from 'react';
-import DomToImage from 'dom-to-image';
-import '../OutputComponent/style.css';
+import { useRef, Fragment } from "react";
+
+import "./style.css";
+import DomToImage from "dom-to-image";
+
 const OutputComponent = ({ text_value, head_value }) => {
   const ref = useRef(null);
-  //now lets apply DOM-TO-image
 
-  const getImg = e => {
+  const getImg = (e) => {
     e.preventDefault();
     DomToImage.toPng(ref.current)
-      .then(dataUrl => {
+      .then((dataUrl) => {
         const img = new Image();
         img.src = dataUrl;
-        downloadURI(dataUrl, 'type2.png');
+        downloadURI(dataUrl, "type2.png");
       })
-      .catch(error => {
-        console.error('oops,something went wrong', error);
+      .catch((error) => {
+        console.error("oops,something went wrong", error);
       });
   };
   function downloadURI(uri, name) {
-    const link = document.createElement('a');
+    const link = document.createElement("a");
     link.download = name;
     link.href = uri;
     document.body.appendChild(link);
@@ -28,7 +29,7 @@ const OutputComponent = ({ text_value, head_value }) => {
   return (
     <Fragment>
       <div
-        id='output'
+        id="output"
         ref={ref}
         style={{
           fontFamily: head_value.fontType1,
@@ -36,9 +37,9 @@ const OutputComponent = ({ text_value, head_value }) => {
       >
         <p
           style={{
-            fontSize: head_value.size1 + '%',
-            marginTop: head_value.top1 + '%',
-            marginLeft: head_value.left1 + '%',
+            fontSize: head_value.size1 + "%",
+            marginTop: head_value.top1 + "%",
+            marginLeft: head_value.left1 + "%",
             fontFamily: head_value.fontType1,
           }}
         >
@@ -46,9 +47,9 @@ const OutputComponent = ({ text_value, head_value }) => {
         </p>
         <p
           style={{
-            fontSize: text_value.size + '%',
-            marginTop: text_value.top + '%',
-            marginLeft: text_value.left + '%',
+            fontSize: text_value.size + "%",
+            marginTop: text_value.top + "%",
+            marginLeft: text_value.left + "%",
             lineHeight: text_value.line,
             fontFamily: text_value.fontType,
           }}
@@ -64,7 +65,7 @@ const OutputComponent = ({ text_value, head_value }) => {
           neque.
         </p>
       </div>
-      <button onClick={e => getImg(e)}>Download Png</button>
+      <button onClick={(e) => getImg(e)}>Download Png</button>
     </Fragment>
   );
 };
