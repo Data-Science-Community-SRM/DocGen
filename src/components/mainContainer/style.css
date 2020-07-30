@@ -1,0 +1,211 @@
+body{
+  color: #fafafa;
+}
+.mainContainer {
+  height: 100% !important;
+  width: 100% !important;
+  background-color: rgb(100, 100, 100);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.logoFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 15%;
+  width: 100%;
+  border-bottom: 1px solid white;
+  position: relative;
+}
+
+.optionsContainer {
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1.5rem;
+  border: 2px solid var(--mainTheme);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.optionsInnerContainer {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--mainTheme);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 1rem;
+}
+
+.outputDisplay {
+  border: 2px solid var(--mainTheme);
+
+  width: 100%;
+  height: 100%;
+}
+.entertext {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@media only screen and (min-width: 756px) {
+  .ioFlex {
+    height: 85%;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+  .iFlex {
+    height: 106%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    margin-top: -0.85rem;
+  }
+  .oFlex {
+    width: 40%;
+    height: 106%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    margin-top: -0.85rem;
+  }
+
+  .logo {
+    height: 80%;
+    width: 5%;
+    padding-top: 0.5rem;
+    left: 0;
+    position: absolute;
+  }
+  .logo2 {
+    height: 80%;
+    width: 5%;
+    /* margin-left: 85%; */
+    text-align: right;
+    right: 0;
+    position: absolute;
+    padding-top: 0.5rem;
+  }
+  .downloadbtn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3%;
+  }
+  .uploadbtns {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 6%;
+    margin-left: 6.5%;
+  }
+  .page {
+    margin-right: 10%;
+  }
+  .paper {
+    height: 59%;
+    width: 23%;
+position: absolute;
+left: 8.5%;
+top: 27%;
+  }
+  footer {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 2%;
+    font-weight: 200;
+  }
+
+}
+
+
+@media only screen and (max-width: 756px) {
+  .ioFlex {
+    height: 85%;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .iFlex {
+    height: 100%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: 10%;
+    margin-left: 12.7%;
+    margin-top: 0.5rem;
+  }
+  .oFlex {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10%;
+    margin-left: 12.7%;
+    margin-top: 0.5rem;
+  }
+
+  .logo {
+    height: 65%;
+    width: 18%;
+    padding-top: 0.5rem;
+    left: 0;
+    position: absolute;
+  }
+  .logo2 {
+    height: 65%;
+    width: 18%;
+    /* margin-left: 85%; */
+    text-align: right;
+    right: 0;
+    position: absolute;
+    padding-top: 0.5rem;
+  }
+  .downloadbtn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 6%;
+  }
+  .uploadbtns {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 6%;
+    margin-left: 7%;
+  }
+  .page {
+    margin-right: 10%;
+  }
+  footer {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: 200;
+  }
+}
+.inputborder{
+  border: 2px solid var(--mainTheme);
+ 
+}
+.form{
+  font-size: 1.3rem;
+}
