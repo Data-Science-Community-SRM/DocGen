@@ -1,23 +1,24 @@
 import { useRef, Fragment } from "react";
 
-import "./style.css";
 import DomToImage from "dom-to-image";
 
 const OutputComponent = ({ text_value, head_value }) => {
-  const ref = useRef(null);
+  const outputPage = useRef(null);
 
   const getImg = (e) => {
     e.preventDefault();
-    DomToImage.toPng(ref.current)
+
+    DomToImage.toPng(outputPage.current)
       .then((dataUrl) => {
         const img = new Image();
         img.src = dataUrl;
-        downloadURI(dataUrl, "type2.png");
+        downloadURI(dataUrl, "testImage.png");
       })
       .catch((error) => {
         console.error("oops,something went wrong", error);
       });
   };
+
   function downloadURI(uri, name) {
     const link = document.createElement("a");
     link.download = name;
@@ -26,32 +27,33 @@ const OutputComponent = ({ text_value, head_value }) => {
     link.click();
     document.body.removeChild(link);
   }
+
   return (
     <Fragment>
       <div
-        id="output"
-        ref={ref}
+        ref={outputPage}
         style={{
-          fontFamily: head_value.fontType1,
+          position: "relative",
+          height: "100%",
+          width: "100%",
         }}
       >
-        <p
+        <h1
           style={{
-            fontSize: head_value.size1 + "%",
-            marginTop: head_value.top1 + "%",
-            marginLeft: head_value.left1 + "%",
-            fontFamily: head_value.fontType1,
+            fontSize: `${head_value.headSize}px`,
+            marginTop: `${head_value.headTop}px`,
+            marginLeft: `${head_value.headLeft}px`,
+            fontFamily: `${text_value.headFont}`,
           }}
         >
           Tom Riddle's Diary
-        </p>
+        </h1>
         <p
           style={{
-            fontSize: text_value.size + "%",
-            marginTop: text_value.top + "%",
-            marginLeft: text_value.left + "%",
-            lineHeight: text_value.line,
-            fontFamily: text_value.fontType,
+            fontSize: `${text_value.bodySize}px`,
+            marginTop: `${text_value.bodyTop}px`,
+            marginLeft: `${text_value.bodyLeft}px`,
+            fontFamily: `${text_value.bodyFont}px`,
           }}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut orci
@@ -65,7 +67,7 @@ const OutputComponent = ({ text_value, head_value }) => {
           neque.
         </p>
       </div>
-      <button onClick={(e) => getImg(e)}>Download Png</button>
+      <button onClick={getImg}>Download Png</button>
     </Fragment>
   );
 };
