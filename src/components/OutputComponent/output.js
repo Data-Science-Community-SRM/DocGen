@@ -35,9 +35,10 @@ const OutputComponent = ({ bodyValues, headValues }) => {
             position: "relative",
             backgroundImage: "url(../../assets/paper.png",
             backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            height: "942px",
-            width: "595px",
+            backgroundSize: "100vh 100%",
+            height: "100vh",
+            width: "100%",
+
           }}
         >
           <h1
@@ -59,6 +60,7 @@ const OutputComponent = ({ bodyValues, headValues }) => {
               left: `${bodyValues.bodyLeft}px`,
               lineHeight: `${bodyValues.bodyLine}rem`,
               fontFamily: `${bodyValues.bodyFont}px`,
+              paddingRight: "1rem"
             }}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut orci

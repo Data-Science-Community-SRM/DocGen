@@ -2,9 +2,20 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #232323;
+
+#app{
+  background-color: #232323; 
+  --mainTheme: rgb(234, 118, 250);
+  --btnHover: rgb(119, 45, 129);
+  color: black
+}
+
+
+.heading1{
+  font-size: 2rem;
+  color: white;
+}
+.heading2{
+  font-size: 1.5rem;
+  color: white;
 }

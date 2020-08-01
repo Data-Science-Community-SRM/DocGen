@@ -38,9 +38,10 @@ const MainContainer = () => {
 
   return (
     <>
+    
       <div class={`row col-12`}>
         <div class={`col-6`}>
-          <h1 class="heading1 primary">Input</h1>
+          <div class="heading1 primary">Output</div>
           <div class={style.outputDisplay}>
             <div
               style={{
@@ -58,9 +59,9 @@ const MainContainer = () => {
           </div>
         </div>
         <div class={`col-6`}>
-          <h1 class="heading1 primary">Customisations</h1>
+          <div class="heading1 primary">Customisations</div>
           <div class={style.optionsContainer}>
-            <h3 class="heading2 primary">Page Options</h3>
+            <div class="heading2 primary">Page Options</div>
             <div class={style.optionsInnerContainer}>
               <div>
                 <form class={style.form}>
@@ -149,7 +150,7 @@ const MainContainer = () => {
                 </form>
               </div>
               <div class={style.downloadbtn}>
-                <DownloadButton name="Download Page" />
+                <DownloadButton name="Download Page"  />
               </div>
             </div>
           </div>

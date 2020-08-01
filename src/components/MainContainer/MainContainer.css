@@ -1,0 +1,24 @@
+
+.optionsContainer{
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.3rem; 
+    margin-top: 0.5rem;                   
+    border: 2px solid var(--mainTheme);
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.optionsInnerContainer{
+    margin-top: 0.5rem;    
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid var(--mainTheme);
+    align-items: center;
+    color: white !important;
+}
+

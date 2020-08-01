@@ -1,8 +1,9 @@
 @media only screen and (min-width: 756px){
 .inButtons{
-    background-color: rgb(100, 100, 100);
-    width: 12rem;
+    background-color: #232323; 
     height: 2.5rem;
+    padding-right: 0.4rem;
+    padding-left: 0.4rem;
     color: white;
     border: 1px solid var(--mainTheme);
     border-radius: 16px 16px;
