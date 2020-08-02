@@ -1,71 +1,84 @@
-import { useRef, Fragment } from 'react';
-import DomToImage from 'dom-to-image';
-import '../OutputComponent/style.css';
-const OutputComponent = ({ text_value, head_value }) => {
-  const ref = useRef(null);
-  //now lets apply DOM-TO-image
+import { useRef } from "react";
+import DomToImage from "dom-to-image";
 
-  const getImg = e => {
+const OutputComponent = ({ bodyValues, headValues }) => {
+  const outputPage = useRef(null);
+
+  const getImg = (e) => {
     e.preventDefault();
-    DomToImage.toPng(ref.current)
-      .then(dataUrl => {
+
+    DomToImage.toPng(outputPage.current)
+      .then((dataUrl) => {
         const img = new Image();
         img.src = dataUrl;
-        downloadURI(dataUrl, 'type2.png');
+        downloadURI(dataUrl, "testImage.png");
       })
-      .catch(error => {
-        console.error('oops,something went wrong', error);
+      .catch((error) => {
+        console.error("oops,something went wrong", error);
       });
   };
+
   function downloadURI(uri, name) {
-    const link = document.createElement('a');
+    const link = document.createElement("a");
     link.download = name;
     link.href = uri;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   }
+
   return (
-    <Fragment>
-      <div
-        id='output'
-        ref={ref}
-        style={{
-          fontFamily: head_value.fontType1,
-        }}
-      >
-        <p
+    <>
+      <div ref={outputPage}>
+        <div
           style={{
-            fontSize: head_value.size1 + '%',
-            marginTop: head_value.top1 + '%',
-            marginLeft: head_value.left1 + '%',
-            fontFamily: head_value.fontType1,
+            position: "relative",
+            backgroundImage: "url(../../assets/ruled1.png)",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "100vh 100%",
+            height: "100vh",
+            width: "100%",
+
           }}
         >
-          Tom Riddle's Diary
-        </p>
-        <p
-          style={{
-            fontSize: text_value.size + '%',
-            marginTop: text_value.top + '%',
-            marginLeft: text_value.left + '%',
-            lineHeight: text_value.line,
-            fontFamily: text_value.fontType,
-          }}
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut orci
-          ligula. Cras vehicula mi sit amet porta lobortis. Morbi vel ultrices
-          elit, quis lobortis eros. Phasellus hendrerit ex sed tempus aliquam.
-          Fusce scelerisque, sem vel tristique hendrerit, urna erat eleifend
-          est, vitae cursus tellus tellus at massa. In et malesuada ipsum.
-          Nullam commodo tellus vitae blandit fringilla. Donec vestibulum luctus
-          tellus, non malesuada turpis luctus vitae. Fusce ac nisi vitae dolor
-          egestas aliquet eget in ligula. Nunc in tempus ligula, non commodo
-          neque.
-        </p>
+          <h1
+            style={{
+              position: "absolute",
+              fontSize: `${headValues.headSize}px`,
+              top: `${headValues.headTop}px`,
+              left: `${headValues.headLeft}px`,
+              fontFamily: `${headValues.headFont}`,
+            }}
+          >
+     Tom Riddle's Diary
+          </h1>
+          <p
+            style={{
+              position: "absolute",
+              fontSize: `${bodyValues.bodySize}px`,
+              top: `${bodyValues.bodyTop}px`,
+              left: `${bodyValues.bodyLeft}px`,
+              lineHeight: `${bodyValues.bodyLine}rem`,
+              fontFamily: `${bodyValues.bodyFont}px`,
+              paddingRight: "1rem"
+            }}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut orci
+            ligula. Cras vehicula mi sit amet porta lobortis. Morbi vel ultrices
+            elit, quis lobortis eros. Phasellus hendrerit ex sed tempus aliquam.
+            Fusce scelerisque, sem vel tristique hendrerit, urna erat eleifend
+            est, vitae cursus tellus tellus at massa. In et malesuada ipsum.
+            Nullam commodo tellus vitae blandit fringilla. Donec vestibulum
+            luctus tellus, non malesuada turpis luctus vitae. Fusce ac nisi
+            vitae dolor egestas aliquet eget in ligula. Nunc in tempus ligula,
+            non commodo neque.
+          </p>
+        </div>
       </div>
-      <button onClick={e => getImg(e)}>Download Png</button>
-    </Fragment>
+      <button onClick={getImg} style={{ position: "fixed", bottom: "10px" }}>
+        Download Png
+      </button>
+    </>
   );
 };
 export default OutputComponent;

@@ -1,58 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Satisfy&display=swap');
-html, body {
-	height: 100%;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-	background: #FAFAFA;
-	font-family: 'Helvetica Neue', arial, sans-serif;
-	font-weight: 400;
-	color: #444;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	--mainTheme: rgb(234, 118, 250);
-	--btnHover: rgb(119, 45, 129);
-	font-family: 'Cookie', cursive;
-}
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
+}
+body{
+  background-color:#232323 ;
+
 }
 
-#app {
-	height: 100%;
-}
-.primary{
-	color: white;
+#app{
+  background-color: #232323; 
+  --mainTheme: #6f389f;
+  --btnHover: rgba(129, 21, 143, 0.582);
+  color: black
 }
 
+.heading1{
+  font-size: 2rem;
+  color: white;
+  font-family: 'Satisfy', cursive !important;
+  
+}
 .heading2{
-	font-size: 1.5rem;
-
-}
-.semibold{
-	font-weight: 800;
-}
-.link{
-	cursor: pointer;
-	text-decoration: underline;
-}
-@media only screen and (max-width:756px){
-	.heading1{
-		font-size: 1.5rem;
-		font-weight: 500;
-		font-family: 'Satisfy', cursive;
-		
-	}
-	
-}
-@media only screen and (min-width:756px){
-	.heading1{
-		font-size: 2rem;
-		font-weight: 500;
-		font-family: 'Satisfy', cursive;
-		margin-bottom: -0.8rem;
-		z-index: 9999;
-	}
-
+  font-size: 1.5rem;
+  color: white;
+  font-family: 'Cookie', cursive;
 }
