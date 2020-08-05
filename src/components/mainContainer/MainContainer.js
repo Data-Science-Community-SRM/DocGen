@@ -19,7 +19,7 @@ const MainContainer = () => {
     bodySize: null,
     bodyFont: null,
     bodyLeft: null,
-    bodyTop: 100,
+    bodyTop: null,
     bodyLine: null,
   });
 
@@ -37,45 +37,37 @@ const MainContainer = () => {
   };
 
   return (
-    <>
-    
-      <div class={`row col-12`}>
-       
-        <div class={`col-6`}>
-          <div class="heading1 primary">Input</div>
-          <div class={style.optionsContainer}>
-            <div class="heading2 primary">Page Options</div>
-            <div class={style.optionsInnerContainer}>
+    <div className={`row col-12 mx-auto mt-3`} style={{ height: "100%" }}>
+      <div className={`col-6 mx-auto`}>
+        <div class="heading1 primary">Input</div>
+        <div class={style.optionsContainer}>
+          <div class="heading2 primary">Page Options</div>
+          <div class={style.optionsInnerContainer}>
+            <form class={style.form}>
+              <div className="form-group">
+                <div class={style.sqbtns}>
+                  <div class={style.sq}>
+                    <InputButton name="Default Page" />
+                  </div>
+                  <div class={style.sq}>
+                    <InputButton name="Upload Page" />
+                  </div>
+                  <div class={style.sq}>
+                    <InputButton name="Upload Font" />
+                  </div>
+                </div>
+                <input
+                  type="radio"
+                  name="toggle"
+                  value={isBody}
+                  id="heading"
+                  onClick={() => setIsBody(!isBody)}
+                />
+                <label for="heading">Edit {isBody ? "Body" : "Title"}</label>
+                <br />
 
-                     <form class={style.form}>
-                  <div className="form-group">
-                           
-   <div class={style.sqbtns}>
-     <div class={style.sq}>
-       <InputButton name="Default Page"/>
-     </div>
-     <div class={style.sq}>
-       <InputButton name="Upload Page"/>
-     </div>
-     <div class={style.sq}>
-       <InputButton name="Upload Font"/>
-     </div>
-     </div>
-                    <input
-                      type="radio"
-                      name="toggle"
-                      value={isBody}
-                      id="heading"
-                      onClick={() => setIsBody(!isBody)}
-                    />
-                    <label for="heading">
-                      Edit {isBody ? "Body" : "Title"}
-                    </label>
-                    <br/>
-                
-       
-                    <label for="size">Font size</label>
-                    <div  class={style.inline}>
+                <label for="size">Font size</label>
+                <div class={style.inline}>
                   <div class={style.r1}>
                     <div class={style.inputborder}>
                       <input
@@ -94,10 +86,10 @@ const MainContainer = () => {
                         }}
                       />
                     </div>
-                    </div>
-                
-                    <label for="left">Adjust x-axis</label>
-                    <div class={style.r1}>
+                  </div>
+
+                  <label for="left">Adjust x-axis</label>
+                  <div class={style.r1}>
                     <div class={style.inputborder}>
                       <input
                         type="range"
@@ -112,12 +104,12 @@ const MainContainer = () => {
                         onChange={onValueChange}
                       />
                     </div>
-</div>
-</div>
+                  </div>
+                </div>
 
-                    <label for="top">Adjust y-axis </label>
-                    <div  class={style.inline}>
-<div class={style.r1}>
+                <label for="top">Adjust y-axis </label>
+                <div class={style.inline}>
+                  <div class={style.r1}>
                     <div class={style.inputborder}>
                       <input
                         type="range"
@@ -132,10 +124,10 @@ const MainContainer = () => {
                         onChange={onValueChange}
                       />
                     </div>
-</div>
+                  </div>
 
-                    <label for="spacing">Line-spacing</label>         
-                    <div class={style.r1}>
+                  <label for="spacing">Line-spacing</label>
+                  <div class={style.r1}>
                     <div class={style.inputborder}>
                       <input
                         type="range"
@@ -152,37 +144,30 @@ const MainContainer = () => {
                       />
                     </div>
                   </div>
-                  </div>
-                 
-                  </div>
-                </form>
-            
-              <div class={style.downloadbtn}>
-                <DownloadButton name="Download Page"  />
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class={`col-6`}>
-          <div class="heading1 primary">Output</div>
-          <div class={style.outputDisplay}>
-            <div
-              style={{
-                overflow: "hidden",
-                height: "100%",
-                width: "100%",
-              }}
-            >
-              <Output
-                bodyValues={bodyFormData}
-                headValues={headFormData}
-                bgImage={imageName}
-              />
+            </form>
+
+            <div class={style.downloadbtn}>
+              <DownloadButton name="Download Page" />
             </div>
           </div>
         </div>
       </div>
-    </>
+      <div className={`col-5 mx-auto`} style={{ height: "100%" }}>
+        <div className="heading1 primary">Output</div>
+        <div
+          className={`${style.outputDisplay} mx-auto`}
+          style={{ height: "100%" }}
+        >
+          <Output
+            bodyValues={bodyFormData}
+            headValues={headFormData}
+            className={style.outputInnerDisplay}
+          />
+        </div>
+      </div>
+    </div>
   );
 };
 export default MainContainer;

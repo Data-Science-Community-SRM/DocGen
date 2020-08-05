@@ -1,28 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Satisfy&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Satisfy&display=swap");
 
 * {
   box-sizing: border-box;
 }
-body{
-  background-color:#232323 ;
-
+body {
+  background-color: #232323 !important;
+  overflow-y: hidden;
 }
 
-#app{
-  background-color: #232323; 
+#app {
   --mainTheme: #6f389f;
   --btnHover: rgba(129, 21, 143, 0.582);
-  color: black
+  color: black;
 }
 
-.heading1{
+.heading1 {
   font-size: 2rem;
   color: white;
-  font-family: 'Satisfy', cursive !important;
-  
+  font-family: "Satisfy", cursive !important;
 }
-.heading2{
+.heading2 {
   font-size: 1.5rem;
   color: white;
-  font-family: 'Cookie', cursive;
+  font-family: "Cookie", cursive;
 }

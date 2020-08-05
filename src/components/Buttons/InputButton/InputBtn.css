@@ -9,7 +9,7 @@
 @media only screen and (max-width:756px){
     .inButtons{
         background-color:#232323;
-        width: 9rem;
+        width: 7rem;
         height: 3rem;
         margin-right: 3%;
         margin-left: 2%;
@@ -35,7 +35,7 @@
 @media only screen and (min-width:756px){
     .inButtons{
         background-color:#232323;
-        width: 11rem;
+        width: 7rem;
         height: 2.8rem;
 
         padding-top: 1.5%;

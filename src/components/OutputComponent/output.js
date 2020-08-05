@@ -1,6 +1,9 @@
 import { useRef } from "react";
 import DomToImage from "dom-to-image";
 
+import bgImage from "../../assets/ruled1.png";
+import classes from "./Output.module.css";
+
 const OutputComponent = ({ bodyValues, headValues }) => {
   const outputPage = useRef(null);
 
@@ -29,56 +32,68 @@ const OutputComponent = ({ bodyValues, headValues }) => {
 
   return (
     <>
-      <div ref={outputPage}>
-        <div
-          style={{
-            position: "relative",
-            backgroundImage: "url(../../assets/ruled1.png)",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "100vh 100%",
-            height: "100vh",
-            width: "100%",
-
-          }}
-        >
-          <h1
-            style={{
-              position: "absolute",
-              fontSize: `${headValues.headSize}px`,
-              top: `${headValues.headTop}px`,
-              left: `${headValues.headLeft}px`,
-              fontFamily: `${headValues.headFont}`,
-            }}
-          >
-     Tom Riddle's Diary
-          </h1>
-          <p
-            style={{
-              position: "absolute",
-              fontSize: `${bodyValues.bodySize}px`,
-              top: `${bodyValues.bodyTop}px`,
-              left: `${bodyValues.bodyLeft}px`,
-              lineHeight: `${bodyValues.bodyLine}rem`,
-              fontFamily: `${bodyValues.bodyFont}px`,
-              paddingRight: "1rem"
-            }}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut orci
-            ligula. Cras vehicula mi sit amet porta lobortis. Morbi vel ultrices
-            elit, quis lobortis eros. Phasellus hendrerit ex sed tempus aliquam.
-            Fusce scelerisque, sem vel tristique hendrerit, urna erat eleifend
-            est, vitae cursus tellus tellus at massa. In et malesuada ipsum.
-            Nullam commodo tellus vitae blandit fringilla. Donec vestibulum
-            luctus tellus, non malesuada turpis luctus vitae. Fusce ac nisi
-            vitae dolor egestas aliquet eget in ligula. Nunc in tempus ligula,
-            non commodo neque.
-          </p>
+      <div
+        ref={outputPage}
+        className={`${classes.wrapper} col-12 mx-auto px-0`}
+      >
+        <div className={`${classes.imgContainer} col-12 mx-auto`}>
+          <img
+            src={bgImage}
+            alt="bg-image"
+            width="100%"
+            height="100%"
+            className="mx-auto"
+          />
+        </div>
+        <div className={`${classes.formGroup} col-12`}>
+          <input type="text" />
+          <textarea />
         </div>
       </div>
-      <button onClick={getImg} style={{ position: "fixed", bottom: "10px" }}>
+      <button onClick={getImg} style={{ position: "relative", bottom: "0px" }}>
         Download Png
       </button>
     </>
   );
 };
 export default OutputComponent;
+
+{
+  /* <input
+  type="text"
+  placeholder="Enter Title"
+  style={{
+    position: "absolute",
+    top: "0",
+    fontSize: `${headValues.headSize}px`,
+    paddingTop: `${headValues.headTop}px`,
+    paddingLeft: `${headValues.headLeft}px`,
+    fontFamily: `${headValues.headFont}`,
+    background: "transparent",
+    border: "none",
+
+    display: "block",
+    width: "100%",
+    height: "20%",
+  }}
+></input>
+<textarea
+  type="text"
+  placeholder="Enter Content"
+  style={{
+    position: "absolute",
+    bottom: "0",
+    fontSize: `${bodyValues.bodySize}px`,
+    paddingTop: `${bodyValues.bodyTop}px`,
+    paddingLeft: `${bodyValues.bodyLeft}px`,
+    lineHeight: `${bodyValues.bodyLine}rem`,
+    fontFamily: `${bodyValues.bodyFont}`,
+    paddingRight: "1rem",
+    background: "transparent",
+    border: "none",
+    height: "80%",
+    width: "100%",
+    overflowY: "hidden",
+  }}
+/> */
+}
