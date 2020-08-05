@@ -1,10 +1,8 @@
 .wrapper {
   position: relative;
-  height: 100%;
 }
 
 .imgContainer {
-  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -12,9 +10,6 @@
 .imgContainer img {
   height: 100%;
   width: 100%;
-}
-.formGroup {
-  height: 100%;
 }
 .formGroup input,
 .formGroup textarea {

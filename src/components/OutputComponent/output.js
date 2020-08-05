@@ -9,7 +9,6 @@ const OutputComponent = ({ bodyValues, headValues }) => {
 
   const getImg = (e) => {
     e.preventDefault();
-
     DomToImage.toPng(outputPage.current)
       .then((dataUrl) => {
         const img = new Image();
@@ -21,21 +20,18 @@ const OutputComponent = ({ bodyValues, headValues }) => {
       });
   };
 
-  function downloadURI(uri, name) {
+  const downloadURI = (uri, name) => {
     const link = document.createElement("a");
     link.download = name;
     link.href = uri;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-  }
+  };
 
   return (
     <>
-      <div
-        ref={outputPage}
-        className={`${classes.wrapper} col-12 mx-auto px-0`}
-      >
+      <div ref={outputPage} className={`${classes.wrapper} col-6 mx-auto px-0`}>
         <div className={`${classes.imgContainer} col-12 mx-auto`}>
           <img
             src={bgImage}
