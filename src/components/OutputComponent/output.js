@@ -31,22 +31,31 @@ const OutputComponent = ({ bodyValues, headValues }) => {
 
   return (
     <>
-      <div ref={outputPage} className={`${classes.wrapper} col-6 mx-auto px-0`}>
-        <div className={`${classes.imgContainer} col-12 mx-auto`}>
-          <img
-            src={bgImage}
-            alt="bg-image"
-            width="100%"
-            height="100%"
-            className="mx-auto"
+      <div className="col-8 mx-auto p-2" style={{ border: "3px red solid" }}>
+        <div
+          ref={outputPage}
+          className={`${classes.wrapper} col-12 mx-auto px-0`}
+        >
+          <div className={`${classes.imgContainer} col-12 mx-auto px-0`}>
+            <img src={bgImage} alt="bg-image" className="mx-auto px-0" />
+          </div>
+          <input
+            type="text"
+            className={classes.titleInput}
+            placeholder="Welcome to your DocGen"
+          />
+          <textarea
+            name=""
+            id=""
+            className={classes.contentInput}
+            placeholder="Paste your content here! You can type it too, but we know people."
           />
         </div>
-        <div className={`${classes.formGroup} col-12`}>
-          <input type="text" />
-          <textarea />
-        </div>
       </div>
-      <button onClick={getImg} style={{ position: "relative", bottom: "0px" }}>
+      <button
+        onClick={getImg}
+        style={{ position: "fixed", right: "0", bottom: "0" }}
+      >
         Download Png
       </button>
     </>

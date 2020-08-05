@@ -1,21 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Cookie&family=Satisfy&display=swap");
 
 * {
-  box-sizing: border-box;
+  box-sizing: border-box !important;
+}
+html {
+  height: 100%;
+  width: 100%;
 }
 body {
   background-color: #232323 !important;
+  width: 100%;
+  height: 100%;
   /* overflow-y: hidden; */
 }
+
 input[type="range"] {
   height: 0px;
   -webkit-appearance: none;
   margin: 15px 10px;
   width: 100%;
 }
+
 input[type="range"]:focus {
   outline: none;
 }
+
 input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
   height: 6px;
@@ -26,6 +35,7 @@ input[type="range"]::-webkit-slider-runnable-track {
   border-radius: 5px;
   border: 0px solid var(--mainTheme);
 }
+
 input[type="range"]::-webkit-slider-thumb {
   box-shadow: 0px 0px 0px var(--mainTheme);
   border: 1px solid var(--mainTheme);
@@ -101,15 +111,4 @@ input[type="range"]:focus::-ms-fill-upper {
   --mainTheme: #6f389f;
   --btnHover: rgba(129, 21, 143, 0.582);
   color: black;
-}
-
-.heading1 {
-  font-size: 2rem;
-  color: white;
-  font-family: "Satisfy", cursive !important;
-}
-.heading2 {
-  font-size: 1.5rem;
-  color: white;
-  font-family: "Cookie", cursive;
 }

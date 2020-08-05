@@ -1,24 +1,26 @@
-.wrapper {
-  position: relative;
-}
-
 .imgContainer {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
 }
 .imgContainer img {
   height: 100%;
   width: 100%;
 }
-.formGroup input,
-.formGroup textarea {
-  position: block;
-  background: transparent;
+
+.titleInput,
+.contentInput {
+  position: absolute;
   border: none;
+  background-color: transparent;
+  z-index: 2;
   width: 100%;
 }
 
-.formGroup textarea {
-  height: 80%;
+.titleInput {
+  top: 0;
+  height: 10%;
+}
+
+.contentInput {
+  bottom: 0;
+  height: 90%;
 }
