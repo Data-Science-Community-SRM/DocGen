@@ -113,7 +113,9 @@ const Settings = () => {
         </div>
 
         <div class={`col-12 mx-auto text-center mt-4`}>
-          <button className="mx-auto col-6">Download</button>
+          <button className="mx-auto col-6" onClick={editContext.downloadImg}>
+            Download
+          </button>
         </div>
       </div>
     </div>
