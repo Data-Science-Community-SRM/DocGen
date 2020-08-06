@@ -1,3 +1,6 @@
+.wrapper {
+  border: 3px solid var(--mainTheme);
+}
 .imgContainer {
   position: relative;
 }

@@ -1,52 +1,10 @@
 .optionsContainer {
-  margin-top: 0rem;
   border: 2px solid var(--mainTheme);
   width: 100%;
   height: 100%;
   font-family: "Cookie", cursive;
+}
 
-  display: flex;
-  flex-direction: column;
-}
-.optionsInnerContainer {
-  margin: 0;
-
-  font-family: "Cookie", cursive;
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+.inputBorder {
   border: 1px solid var(--mainTheme);
-  align-items: center;
-  color: white !important;
-}
-.sqbtns {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin-top: 1rem;
-}
-.sq {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin-right: 0.5rem;
-}
-.inputborder {
-  border: 1px solid var(--mainTheme);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-.inline {
-  margin-top: 0.1rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  padding-bottom: 5%;
-}
-.r1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
 }
