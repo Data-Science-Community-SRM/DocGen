@@ -16,7 +16,7 @@ const OutputComponent = () => {
       <div className={`${classes.wrapper} col-11 col-lg-8 mx-auto mt-4 p-2`}>
         <div id="outputPage" className={`col-12 mx-auto px-0`}>
           <div className={`${classes.imgContainer} col-12 mx-auto px-0`}>
-            <img src={blank2} alt="bg-image" className="mx-auto px-0" />
+            <img src={onlyMargin} alt="bg-image" className="mx-auto px-0" />
           </div>
           <textarea
             type="text"
