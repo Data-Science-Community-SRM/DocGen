@@ -23,7 +23,7 @@ const Settings = () => {
         </div>
 
         <div className={`col-12`}>
-          <div className={`col-12 mx-auto`}>
+          <div className={`col-12 mx-auto my-2 text-center`}>
             <input
               type="radio"
               name="heading"
@@ -46,8 +46,8 @@ const Settings = () => {
                 name={editContext.isBody ? "bodySize" : "headSize"}
                 value={
                   editContext.isBody
-                    ? editContext.bodyFormData.bodySize
-                    : editContext.headFormData.headSize
+                    ? editContext.bodyValues.bodySize
+                    : editContext.headValues.headSize
                 }
                 className="form-control"
                 id="size"
@@ -64,8 +64,8 @@ const Settings = () => {
                 name={editContext.isBody ? "bodyLeft" : "headLeft"}
                 value={
                   editContext.isBody
-                    ? editContext.bodyFormData.bodyLeft
-                    : editContext.headFormData.headLeft
+                    ? editContext.bodyValues.bodyLeft
+                    : editContext.headValues.headLeft
                 }
                 className="form-control"
                 id="left"
@@ -82,8 +82,8 @@ const Settings = () => {
                 name={editContext.isBody ? "bodyTop" : "headTop"}
                 value={
                   editContext.isBody
-                    ? editContext.bodyFormData.bodyTop
-                    : editContext.headFormData.headTop
+                    ? editContext.bodyValues.bodyTop
+                    : editContext.headValues.headTop
                 }
                 className="form-control"
                 id="top"
@@ -101,8 +101,8 @@ const Settings = () => {
                 name={editContext.isBody ? "bodyLine" : "headLine"}
                 value={
                   editContext.isBody
-                    ? editContext.bodyFormData.bodyLine
-                    : editContext.headFormData.headLine
+                    ? editContext.bodyValues.bodyLine
+                    : editContext.headValues.headLine
                 }
                 className="form-control col-12"
                 id="spacing"

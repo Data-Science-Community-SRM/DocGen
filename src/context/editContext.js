@@ -5,15 +5,15 @@ export const EditContext = React.createContext();
 const EditContextProvider = (props) => {
   const [isBody, setIsBody] = useState(true);
 
-  const [headFormData, setHeadFormData] = useState({
-    headSize: null,
+  const [headValues, setHeadValues] = useState({
+    headSize: 24,
     headFont: null,
     headLeft: null,
     headTop: null,
     headLine: null,
   });
 
-  const [bodyFormData, setBodyFormData] = useState({
+  const [bodyValues, setBodyValues] = useState({
     bodySize: null,
     bodyFont: null,
     bodyLeft: null,
@@ -27,11 +27,11 @@ const EditContextProvider = (props) => {
 
   const onValueChange = (e) => {
     if (isBody) {
-      setBodyFormData({ ...bodyFormData, [e.target.name]: e.target.value });
+      setBodyValues({ ...bodyValues, [e.target.name]: e.target.value });
       console.log("test");
     } else {
-      setHeadFormData({
-        ...headFormData,
+      setHeadValues({
+        ...headValues,
         [e.target.name]: e.target.value,
       });
       console.log("testhead");
@@ -42,8 +42,8 @@ const EditContextProvider = (props) => {
     <EditContext.Provider
       value={{
         isBody,
-        headFormData,
-        bodyFormData,
+        headValues,
+        bodyValues,
         onValueChange,
         isBodyHandler,
       }}

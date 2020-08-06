@@ -1,10 +1,13 @@
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 import DomToImage from "dom-to-image";
 
 import bgImage from "../../assets/ruled1.png";
 import classes from "./Output.module.css";
+import { EditContext } from "../../context/editContext";
 
 const OutputComponent = () => {
+  const editContext = useContext(EditContext);
+
   const outputPage = useRef(null);
 
   const getImg = (e) => {
@@ -40,25 +43,25 @@ const OutputComponent = () => {
             type="text"
             className={classes.titleInput}
             placeholder="Welcome to your DocGen"
-            // style={{
-            //   fontSize: `${headValues.headSize}px`,
-            //   paddingTop: `${headValues.headTop}px`,
-            //   paddingLeft: `${headValues.headLeft}px`,
-            //   fontFamily: `${headValues.headFont}`,
-            // }}
+            style={{
+              fontSize: `${editContext.headValues.headSize}px`,
+              paddingTop: `${editContext.headValues.headTop}px`,
+              paddingLeft: `${editContext.headValues.headLeft}px`,
+              fontFamily: `${editContext.headValues.headFont}`,
+            }}
           />
           <textarea
             name=""
             id=""
             className={classes.contentInput}
             placeholder="Paste your content here! You can type it too, but we know people."
-            // style={{
-            //   fontSize: `${bodyValues.bodySize}px`,
-            //   paddingTop: `${bodyValues.bodyTop}px`,
-            //   paddingLeft: `${bodyValues.bodyLeft}px`,
-            //   lineHeight: `${bodyValues.bodyLine}rem`,
-            //   fontFamily: `${bodyValues.bodyFont}`,
-            // }}
+            style={{
+              fontSize: `${editContext.bodyValues.bodySize}px`,
+              paddingTop: `${editContext.bodyValues.bodyTop}px`,
+              paddingLeft: `${editContext.bodyValues.bodyLeft}px`,
+              lineHeight: `${editContext.bodyValues.bodyLine}rem`,
+              fontFamily: `${editContext.bodyValues.bodyFont}`,
+            }}
           />
         </div>
       </div>
