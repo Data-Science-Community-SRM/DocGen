@@ -7,19 +7,19 @@ const EditContextProvider = (props) => {
   const [isBody, setIsBody] = useState(true);
 
   const [headValues, setHeadValues] = useState({
-    headSize: 24,
-    headFont: null,
-    headLeft: null,
+    headSize: null,
     headTop: null,
+    headLeft: null,
     headLine: null,
+    headFont: "HomemadeApple",
   });
 
   const [bodyValues, setBodyValues] = useState({
     bodySize: null,
-    bodyFont: null,
-    bodyLeft: null,
     bodyTop: null,
+    bodyLeft: null,
     bodyLine: null,
+    bodyFont: "HomemadeApple",
   });
 
   const isBodyHandler = () => {

@@ -14,12 +14,18 @@
   position: absolute;
   border: none;
   background-color: transparent;
+  overflow: hidden;
   z-index: 2;
   width: 100%;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .titleInput {
   top: 0;
+  overflow: hidden;
   height: 10%;
 }
 

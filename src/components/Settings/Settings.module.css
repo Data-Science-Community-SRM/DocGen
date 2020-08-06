@@ -2,9 +2,20 @@
   border: 2px solid var(--mainTheme);
   width: 100%;
   height: 100%;
-  font-family: "Cookie", cursive;
+  font-family: "Recursive", sans-serif;
 }
 
 .inputBorder {
   border: 1px solid var(--mainTheme);
+}
+
+.edit label,
+.edit input {
+  cursor: pointer;
+}
+
+.edit span {
+  color: var(--mainTheme);
+  font-weight: 700;
+  font-size: 1.2rem;
 }

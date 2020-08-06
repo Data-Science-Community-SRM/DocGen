@@ -7,36 +7,34 @@ const Settings = () => {
   const editContext = useContext(EditContext);
 
   return (
-    <div className={`col-8 m-auto`}>
+    <div className={`col-12 col-lg-8 m-auto`}>
       <h1>Input</h1>
       <div className={`${style.optionsContainer} p-4 mx-auto col-12`}>
         <div className={`col-12 row mx-auto mt-2 mb-3`}>
-          <div className={`col-4 text-center mx-auto`}>
-            <button className="col-12 text-center">BTN</button>
+          <div className={`col-8 col-lg-6 text-center mx-auto mb-3`}>
+            <button className="col-12 text-center">Upload Fonts</button>
           </div>
-          <div className={`col-4 text-center mx-auto`}>
-            <button className="col-12 text-center">BTN</button>
-          </div>
-          <div className={`col-4 text-center mx-auto`}>
-            <button className="col-12 text-center">BTN</button>
+          <div className={`col-8 col-lg-6 text-center mx-auto mb-3`}>
+            <button className="col-12 text-center">Upload Sheets</button>
           </div>
         </div>
 
         <div className={`col-12`}>
-          <div className={`col-12 mx-auto my-2 text-center`}>
+          <div className={`${style.edit} col-12 mx-auto my-2 text-center`}>
             <input
-              type="radio"
+              type="checkbox"
               name="heading"
               value={editContext.isBody}
               id="heading"
               onClick={editContext.isBodyHandler}
+              className="d-none"
             />
             <label for="heading">
-              Edit {editContext.isBody ? "Body" : "Title"}
+              Edit <span>{editContext.isBody ? "Body" : "Title"}</span>.
             </label>
           </div>
 
-          <div className={`col-12`}>
+          <div className={`col-12 col-sm-10 col-md-8 col-lg-12 mx-auto`}>
             <div className={`${style.inputBorder} col-12 pb-4`}>
               <label for="size">Font size</label>
               <input
@@ -59,7 +57,7 @@ const Settings = () => {
               <label for="left">Adjust x-axis</label>
               <input
                 type="range"
-                min="70"
+                min="5"
                 max="200"
                 name={editContext.isBody ? "bodyLeft" : "headLeft"}
                 value={
@@ -77,8 +75,8 @@ const Settings = () => {
               <label for="top">Adjust y-axis </label>
               <input
                 type="range"
-                min="30"
-                max="200"
+                min="0"
+                max="100"
                 name={editContext.isBody ? "bodyTop" : "headTop"}
                 value={
                   editContext.isBody
@@ -97,7 +95,7 @@ const Settings = () => {
                 type="range"
                 min="1"
                 max="5"
-                step="0.05"
+                step="0.5"
                 name={editContext.isBody ? "bodyLine" : "headLine"}
                 value={
                   editContext.isBody
