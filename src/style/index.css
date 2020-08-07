@@ -2,6 +2,44 @@
   font-family: HomemadeApple;
   src: url(../assets/fonts/HomemadeApple-Regular.ttf);
 }
+@font-face {
+  font-family: Satisfy;
+  src: url(../assets/fonts/Satisfy-Regular.ttf);
+}
+@font-face {
+  font-family: Cookie;
+  src: url(../assets/fonts/Cookie-Regular.ttf);
+}
+@font-face {
+  font-family: Dawning;
+  src: url(../assets/fonts/DawningofaNewDay-Regular.ttf);
+}
+@font-face {
+  font-family: CedarvilleCursive;
+  src: url(../assets/fonts/CedarvilleCursive-Regular.ttf);
+}
+@font-face {
+  font-family: Caveat;
+  src: url(../assets/fonts/Caveat-Regular.ttf);
+}
+@font-face {
+  font-family: LeagueScript;
+  src: url(../assets/fonts/LeagueScript-Regular.ttf);
+}
+@font-face {
+  font-family: IndieFlower;
+  src: url(../assets/fonts/IndieFlower-Regular.ttf);
+}
+@font-face {
+  font-family: Liu ;
+  src: url(../assets/fonts/LiuJianMaoCao-Regular.ttf);
+}
+@font-face {
+  font-family: NothingYouCouldDo;
+  src: url(../assets/fonts/NothingYouCouldDo-Regular.ttf);
+}
+
+
 
 * {
   box-sizing: border-box !important;
@@ -18,5 +56,7 @@ body {
   width: 100%;
   height: 100%;
   color: whitesmoke !important;
+  font-family: Cookie;
+
   /* overflow-y: hidden; */
 }

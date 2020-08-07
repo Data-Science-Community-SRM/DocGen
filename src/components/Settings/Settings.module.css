@@ -1,8 +1,10 @@
+
 .optionsContainer {
   border: 2px solid var(--mainTheme);
   width: 100%;
   height: 100%;
-  font-family: "Recursive", sans-serif;
+  font-family: Cookie;
+ 
 }
 
 .inputBorder {
@@ -19,4 +21,24 @@
   font-weight: 700;
   font-size: 1.2rem;
   font-variant: small-caps;
+}
+
+button {
+
+  color: #ffffff !important;
+
+  box-shadow: 1px 1px 1px #6F389F;
+  padding: 10px 25px;
+  border: 2px solid #673494;
+  border-radius: 20px !important; 
+  background: #6F389F;
+
+}
+button:hover {
+  color: #6F389F !important;
+  background: #232323 ;
+  border: 2px solid #232323 ;
+}
+h1{
+  font-family: Satisfy;
 }
