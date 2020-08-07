@@ -2,6 +2,7 @@ import { useContext } from "react";
 
 import { EditContext } from "../../context/editContext";
 import style from "./Settings.module.css";
+import Example from "../Dropdown/dropdown";
 
 const Settings = () => {
   const editContext = useContext(EditContext);
@@ -12,12 +13,14 @@ const Settings = () => {
       <div className={`${style.optionsContainer} p-4 mx-auto col-12`}>
         <div className={`col-12 row mx-auto mt-2 mb-3`}>
           <div className={`col-8 col-lg-6 text-center mx-auto mb-3`}>
-            <button className="col-12 text-center">Upload Fonts</button>
+ <Example name="Change Style" item1="Homemade Apple" item2="Caveat" item3="Dawning" item4="Indie Flower" item5="Nothing You Could Do" item6="LiuJianMaoCao" item7="League Script"/>
           </div>
           <div className={`col-8 col-lg-6 text-center mx-auto mb-3`}>
-            <button className="col-12 text-center">Upload Sheets</button>
-          </div>
+        <Example name="Change Sheet" item1="Ruled 1" item2="Ruled 2" item3="Only Margin" item4="Blank 1" item5="Blank 2"/>
+</div>
+  
         </div>
+  
 
         <div className={`col-12`}>
           <div className={`${style.edit} col-12 mx-auto my-2 text-center`}>
@@ -111,7 +114,7 @@ const Settings = () => {
         </div>
 
         <div class={`col-12 mx-auto text-center mt-4`}>
-          <button className="mx-auto col-6" onClick={editContext.downloadImg}>
+          <button className="mx-auto col-6 dbtn" onClick={editContext.downloadImg}>
             Download
           </button>
         </div>
