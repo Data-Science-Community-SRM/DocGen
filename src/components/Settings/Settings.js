@@ -13,10 +13,10 @@ const Settings = () => {
       <div className={`${style.optionsContainer} p-4 mx-auto col-12`}>
         <div className={`col-12 row mx-auto mt-2 mb-3`}>
           <div className={`col-8 col-lg-6 text-center mx-auto mb-3`}>
- <Example name="Change Style" item1="Homemade Apple" item2="Caveat" item3="Dawning" item4="Indie Flower" item5="Nothing You Could Do" item6="LiuJianMaoCao" item7="League Script"/>
+          <Example name="Change Style" type="font" items={["HomemadeApple","Caveat","Dawning","IndieFlower","NothingYouCouldDo","Liu","LeagueScript"]} item1="HomemadeApple" item2="Caveat" item3="Dawning" item4="IndieFlower" item5="NothingYouCouldDo" item6="Liu" item7="LeagueScript"/>
           </div>
           <div className={`col-8 col-lg-6 text-center mx-auto mb-3`}>
-        <Example name="Change Sheet" item1="Ruled 1" item2="Ruled 2" item3="Only Margin" item4="Blank 1" item5="Blank 2"/>
+        <Example name="Change Sheet" type="page" items={["Ruled1","Ruled2","OnlyMargin","Blank1","Blank2"]}/>
 </div>
   
         </div>

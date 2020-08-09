@@ -1,26 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import style from "./dropdown.css";
+import { EditContext } from "../../context/editContext";
+
 const Example = (props) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-
+  const editContext = useContext(EditContext);
   const toggle = () => setDropdownOpen(prevState => !prevState);
-
+  const DropDownOptions = ()=>{
+    return <div>
+      {
+        props.items.map((aItem,index)=><DropdownItem onClick={getTargetFunc()} name={editContext.isBody? "bodyFont":"headFont"} value={aItem} class={style.drmenuitem}>{aItem}</DropdownItem>)
+      }
+      </div>;
+  }
+  const getTargetFunc = ()=>{
+    if(props.type == "font")
+      return editContext.onValueChange;
+    return editContext.pageSrcHandler;
+  }
   return (
     <Dropdown isOpen={dropdownOpen} toggle={toggle}>
       <DropdownToggle caret  class={style.drbtn}>
     {props.name}
         </DropdownToggle>
       <DropdownMenu class={style.drmenu}>
-       
-        <DropdownItem class={style.drmenuitem}>{props.item1}</DropdownItem>
-        <DropdownItem class={style.drmenuitem}>{props.item2}</DropdownItem>
-        <DropdownItem class={style.drmenuitem}>{props.item3}</DropdownItem>
-        <DropdownItem class={style.drmenuitem}>{props.item4}</DropdownItem>
-    
-        <DropdownItem class={style.drmenuitem}>{props.item5}</DropdownItem>
-        <DropdownItem class={style.drmenuitem}>{props.item6}</DropdownItem>
-        <DropdownItem class={style.drmenuitem}>{props.item7}</DropdownItem>
+        <DropDownOptions/>
+        
       </DropdownMenu>
     </Dropdown>
   );

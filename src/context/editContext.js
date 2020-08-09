@@ -4,8 +4,11 @@ import DomToImage from "dom-to-image";
 export const EditContext = React.createContext();
 
 const EditContextProvider = (props) => {
+  const aImagePrefix = "../../assets/";
+  const ImageNameMap = {"Ruled1": "Ruled1.png","Ruled2": "Ruled2.jpg", 
+  "OnlyMargin":"OnlyMargin.jpg","Blank1":"Blank1.png","Blank2":"Blank2.jpg"};
   const [isBody, setIsBody] = useState(true);
-
+  const [pageSrc, setPageSrc] = useState(`${aImagePrefix}OnlyMargin.jpg`);
   const [headValues, setHeadValues] = useState({
     headSize: null,
     headTop: null,
@@ -26,16 +29,20 @@ const EditContextProvider = (props) => {
     setIsBody(!isBody);
   };
 
+  const pageSrcHandler = (e)=>{
+    
+    
+    setPageSrc(`${aImagePrefix}${ImageNameMap[e.target.value]}`);
+  }
+
   const onValueChange = (e) => {
     if (isBody) {
       setBodyValues({ ...bodyValues, [e.target.name]: e.target.value });
-      console.log("test");
     } else {
       setHeadValues({
         ...headValues,
         [e.target.name]: e.target.value,
       });
-      console.log("testhead");
     }
   };
 
@@ -66,9 +73,11 @@ const EditContextProvider = (props) => {
         isBody,
         headValues,
         bodyValues,
+        pageSrc,
         onValueChange,
         isBodyHandler,
         downloadImg,
+        pageSrcHandler,
       }}
     >
       {props.children}
