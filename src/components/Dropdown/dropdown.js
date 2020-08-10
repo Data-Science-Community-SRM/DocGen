@@ -7,10 +7,10 @@ const Example = (props) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const editContext = useContext(EditContext);
   const toggle = () => setDropdownOpen(prevState => !prevState);
-  const DropDownOptions = ()=>{
+  const DropDownOptions = ()=>{ 
     return <div>
       {
-        props.items.map((aItem,index)=><DropdownItem onClick={getTargetFunc()} name={editContext.isBody? "bodyFont":"headFont"} value={aItem} class={style.drmenuitem}>{aItem}</DropdownItem>)
+        props.items.map((aItem,index)=><DropdownItem onClick={getTargetFunc()} name={editContext.isBody? "bodyFont":"headFont"} value={aItem} style={{'font-family': `${aItem}`}}>{aItem}</DropdownItem>)
       }
       </div>;
   }
@@ -24,7 +24,7 @@ const Example = (props) => {
       <DropdownToggle caret  class={style.drbtn}>
     {props.name}
         </DropdownToggle>
-      <DropdownMenu class={style.drmenu}>
+      <DropdownMenu>
         <DropDownOptions/>
         
       </DropdownMenu>
