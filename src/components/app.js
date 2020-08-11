@@ -3,6 +3,7 @@ import { Component } from "preact";
 import "../style/index.css";
 import "../style/sliders.css";
 import logo from "../assets/dslogo.png";
+import penlogo from "../assets/penlogo.png";
 import MainContainer from "./MainContainer/MainContainer";
 import EditContextProvider from "../context/editContext";
 
@@ -14,6 +15,19 @@ export default class App extends Component {
   render() {
     return (
       <>
+        <img
+          src={penlogo}
+          className="col-2 col-md-1"
+          alt="dscommunity-logo"
+          style={{
+            width: "100%",
+            position: "fixed",
+            zIndex: "1000",
+            left: "0rem",
+            top: "1rem",
+          }}
+        />
+
         <a
           href="https://dscommunity.in"
           target="_blank"

@@ -1,18 +1,23 @@
 import { useContext } from "react";
 
-
 import classes from "./Output.module.css";
 import { EditContext } from "../../context/editContext";
 
 const OutputComponent = () => {
   const editContext = useContext(EditContext);
-  
+
   return (
     <>
       <div className={`${classes.wrapper} col-11 col-lg-8 mx-auto mt-4 p-2`}>
         <div id="outputPage" className={`col-12 mx-auto px-0`}>
           <div className={`${classes.imgContainer} col-12 mx-auto px-0`}>
-            <img src={ editContext.pageSrc!=undefined? `${editContext.pageSrc}`:''} alt="bg-image" className="mx-auto px-0" />
+            <img
+              src={
+                editContext.pageSrc != undefined ? `${editContext.pageSrc}` : ""
+              }
+              alt="bg-image"
+              className="mx-auto px-0"
+            />
           </div>
           <textarea
             type="text"

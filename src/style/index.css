@@ -39,7 +39,7 @@
   src: url(../assets/fonts/NothingYouCouldDo-Regular.ttf);
 }
 
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 * {
   box-sizing: border-box !important;
@@ -56,7 +56,8 @@ body {
   width: 100%;
   height: 100%;
   color: whitesmoke !important;
-  font-family: Cookie;
+  font-family: 'Lato', sans-serif;
+
 
   /* overflow-y: hidden; */
 }
