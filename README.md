@@ -13,7 +13,7 @@
 
 ## Preview
 
-- ![](uploads/preview.png)
+ ![](uploads/preview.png)
 
 ## Functionalities
 
