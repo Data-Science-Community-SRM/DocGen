@@ -66,11 +66,11 @@ For detailed explanation on how things work, checkout the [CLI Readme](https://g
 Ria Tyagi
 
 <p align="center">
-<img src = "https://github.com/Data-Science-Community-SRM/template/blob/master/logo-light.png?raw=true"  height="120" alt="ria (Insert Your Image Link In Src">
+<img src = "uploads/ria.jpeg"  height="120" alt="ria (Insert Your Image Link In Src">
 </p>
 <p align="center">
 <a href = "https://github.com/riasenpai"><img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36"/></a>
-<a href = "https://www.linkedin.com/in/person1">
+<a href = "https://www.linkedin.com/in/ia-tyagi-0800381b1">
 <img src = "http://www.iconninja.com/files/863/607/751/network-linkedin-social-connection-circular-circle-media-icon.svg" width="36" height="36"/>
 </a>
 </p>
