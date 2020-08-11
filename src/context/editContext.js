@@ -8,6 +8,7 @@ const EditContextProvider = (props) => {
   const ImageNameMap = {"Ruled1": "Ruled1.png","Ruled2": "Ruled2.jpg", 
   "OnlyMargin":"OnlyMargin.jpg","Blank1":"Blank1.png","Blank2":"Blank2.jpg"};
   const [isBody, setIsBody] = useState(true);
+
   const [pageSrc, setPageSrc] = useState(`${aImagePrefix}OnlyMargin.jpg`);
   const [headValues, setHeadValues] = useState({
     headSize: null,
@@ -78,6 +79,7 @@ const EditContextProvider = (props) => {
         isBodyHandler,
         downloadImg,
         pageSrcHandler,
+        
       }}
     >
       {props.children}

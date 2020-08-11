@@ -20,7 +20,7 @@ const Example = (props) => {
             onClick={getTargetFunc()}
             name={editContext.isBody ? "bodyFont" : "headFont"}
             value={aItem}
-            style={{ "font-family": `${aItem}` }}
+            style={{"font-family": `${aItem}`}}
           >
             {aItem}
           </DropdownItem>
