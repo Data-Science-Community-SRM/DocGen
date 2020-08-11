@@ -81,7 +81,7 @@ Ria Tyagi
 Shubham Deodhar
 
 <p align="center">
-<img src = "https://github.com/Data-Science-Community-SRM/DocGen/uploads/shubham.jpeg?raw=true"  height="120" alt="Your Name Here (Insert Your Image Link In Src">
+<img src = "uploads/shubham.jpg"  height="120" alt="shubham (Insert Your Image Link In Src">
 </p>
 <p align="center">
 <a href = "https://github.com/ShubhamDeodhar"><img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36"/></a>
@@ -96,7 +96,7 @@ Shubham Deodhar
 Sakshi Choudhary
 
 <p align="center">
-<img src = "https://github.com/Data-Science-Community-SRM/DocGen/uploads/sakshi.jpeg?raw=true"  height="120" alt="Your Name Here (Insert Your Image Link In Src">
+<img src = "uploads/sakshi.jpeg"  height="120" alt="sakshi(Insert Your Image Link In Src">
 </p>
 <p align="center">
 <a href = "https://github.com/sakshi-choudhary"><img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36"/></a>
