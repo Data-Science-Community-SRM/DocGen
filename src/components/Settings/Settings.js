@@ -9,7 +9,7 @@ const Settings = () => {
 
   return (
     <div className={`col-12 col-lg-8 m-auto`}>
-      <h1 className={`mt-5`}>Input</h1>
+      <h1 className={`mt-5`}>Customisations</h1>
       <div className={`${style.optionsContainer} p-4 mx-auto col-12`}>
         <div className={`col-12 row mx-auto mt-2 mb-3`}>
           <div className={`col-8 col-lg-6 text-center mx-auto mb-3`}>

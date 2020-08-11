@@ -2,8 +2,8 @@
 <a href="https://dscommunity.in">
 	<img src="https://github.com/Data-Science-Community-SRM/template/blob/master/Header.png?raw=true" width=80%/>
 </a>
-	<h2 align="center"> < Insert Project Title Here > </h2>
-	<h4 align="center"> < Insert Project Description Here > <h4>
+	<h2 align="center">Doc Writer</h2>
+	<h4 align="center"> An easy to use one stop solution for generating handwritten documents without actually having to write one. Doc Writer is a savior for all those, who need to complete Handwritten work, without actually having to write one. Be it your assignments, home work or any other tasks, use it for all. <h4>
 </p>
 
 ---
@@ -13,32 +13,48 @@
 
 ## Preview
 
-- Add pictures or important highlights from the Project (if any)
+- ![](uploads/preview.png)
 
 ## Functionalities
 
-- [ ] < insert functionality >
-- [ ] < insert functionality >
-- [ ] < insert functionality >
-- [ ] < insert functionality >
+- [ ] Input text
+- [ ] Change Font Style
+- [ ] Change Sheet
+- [ ] Adjust Font size
+- [ ] Adjust x-axis and y-axis
+- [ ] Adjust Line spacing
+- [ ] Download the File
 
 <br>
 
 ## Instructions to run
 
-- Pre-requisites: - < insert pre-requisite > - < insert pre-requisite >
+- Pre-requisites: -  Node.js > V8.x and npm 5.2+ is a minimum requirement.
 
 - < directions to install >
 
 ```bash
-< insert code >
+# install dependencies
+npm install
 ```
 
 - < directions to execute >
 
 ```bash
-< insert code >
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# test the production build locally
+npm run serve
+
+# run tests with jest and preact-render-spy 
+npm run test
 ```
+For detailed explanation on how things work, checkout the [CLI Readme](https://github.com/developit/preact-cli/blob/master/README.md).
 
 ## Contributors
 
@@ -47,13 +63,13 @@
 
 <td>
 
-John Doe
+Ria Tyagi
 
 <p align="center">
-<img src = "https://github.com/Data-Science-Community-SRM/template/blob/master/logo-light.png?raw=true"  height="120" alt="Your Name Here (Insert Your Image Link In Src">
+<img src = "https://github.com/Data-Science-Community-SRM/template/blob/master/logo-light.png?raw=true"  height="120" alt="ria (Insert Your Image Link In Src">
 </p>
 <p align="center">
-<a href = "https://github.com/person1"><img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36"/></a>
+<a href = "https://github.com/riasenpai"><img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36"/></a>
 <a href = "https://www.linkedin.com/in/person1">
 <img src = "http://www.iconninja.com/files/863/607/751/network-linkedin-social-connection-circular-circle-media-icon.svg" width="36" height="36"/>
 </a>
@@ -62,14 +78,14 @@ John Doe
 
 <td>
 
-John Doe
+Shubham Deodhar
 
 <p align="center">
-<img src = "https://github.com/Data-Science-Community-SRM/template/blob/master/logo-light.png?raw=true"  height="120" alt="Your Name Here (Insert Your Image Link In Src">
+<img src = "https://github.com/Data-Science-Community-SRM/DocGen/uploads/shubham.jpeg?raw=true"  height="120" alt="Your Name Here (Insert Your Image Link In Src">
 </p>
 <p align="center">
-<a href = "https://github.com/person2"><img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36"/></a>
-<a href = "https://www.linkedin.com/in/person2">
+<a href = "https://github.com/ShubhamDeodhar"><img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36"/></a>
+<a href = "https://www.linkedin.com/in/shubham-deodhar-248bb818a">
 <img src = "http://www.iconninja.com/files/863/607/751/network-linkedin-social-connection-circular-circle-media-icon.svg" width="36" height="36"/>
 </a>
 </p>
@@ -77,14 +93,14 @@ John Doe
 
 <td>
 
-John Doe
+Sakshi Choudhary
 
 <p align="center">
-<img src = "https://github.com/Data-Science-Community-SRM/template/blob/master/logo-light.png?raw=true"  height="120" alt="Your Name Here (Insert Your Image Link In Src">
+<img src = "https://github.com/Data-Science-Community-SRM/DocGen/uploads/sakshi.jpeg?raw=true"  height="120" alt="Your Name Here (Insert Your Image Link In Src">
 </p>
 <p align="center">
-<a href = "https://github.com/person3"><img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36"/></a>
-<a href = "https://www.linkedin.com/in/person3">
+<a href = "https://github.com/sakshi-choudhary"><img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36"/></a>
+<a href = "https://www.linkedin.com/in/sakshichoudhary23">
 <img src = "http://www.iconninja.com/files/863/607/751/network-linkedin-social-connection-circular-circle-media-icon.svg" width="36" height="36"/>
 </a>
 </p>
