@@ -2,20 +2,44 @@ import { useContext } from "react";
 
 import { EditContext } from "../../context/editContext";
 import style from "./Settings.module.css";
+import Example from "../Dropdown/dropdown";
 
 const Settings = () => {
   const editContext = useContext(EditContext);
 
   return (
     <div className={`col-12 col-lg-8 m-auto`}>
-      <h1>Input</h1>
+      <h1 className={`mt-5`}>Customisations</h1>
       <div className={`${style.optionsContainer} p-4 mx-auto col-12`}>
         <div className={`col-12 row mx-auto mt-2 mb-3`}>
           <div className={`col-8 col-lg-6 text-center mx-auto mb-3`}>
-            <button className="col-12 text-center">Upload Fonts</button>
+            <Example
+              name="Change Style"
+              type="font"
+              items={[
+                "HomemadeApple",
+                "Caveat",
+                "Dawning",
+                "IndieFlower",
+                "NothingYouCouldDo",
+                "Liu",
+                "LeagueScript",
+              ]}
+              item1="HomemadeApple"
+              item2="Caveat"
+              item3="Dawning"
+              item4="IndieFlower"
+              item5="NothingYouCouldDo"
+              item6="Liu"
+              item7="LeagueScript"
+            />
           </div>
           <div className={`col-8 col-lg-6 text-center mx-auto mb-3`}>
-            <button className="col-12 text-center">Upload Sheets</button>
+            <Example
+              name="Change Sheet"
+              type="page"
+              items={["Ruled1", "Ruled2", "OnlyMargin", "Blank1", "Blank2"]}
+            />
           </div>
         </div>
 
@@ -111,7 +135,10 @@ const Settings = () => {
         </div>
 
         <div class={`col-12 mx-auto text-center mt-4`}>
-          <button className="mx-auto col-6" onClick={editContext.downloadImg}>
+          <button
+            className="mx-auto col-6 dbtn"
+            onClick={editContext.downloadImg}
+          >
             Download
           </button>
         </div>
