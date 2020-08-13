@@ -13,34 +13,29 @@
 
 ## Preview
 
- ![](uploads/preview.png)
+![](uploads/preview.png)
 
 ## Functionalities
 
-- [ ] Input text
-- [ ] Change Font Style
-- [ ] Change Sheet
-- [ ] Adjust Font size
-- [ ] Adjust x-axis and y-axis
-- [ ] Adjust Line spacing
-- [ ] Download the File
+- [x] Input text
+- [x] Change Font Style
+- [x] Change Sheet
+- [x] Adjust Font size
+- [x] Adjust x-axis and y-axis
+- [x] Adjust Line spacing
+- [x] Download the File
+- [ ] User Upload for Fonts
+- [ ] User Upload for Sheets
 
 <br>
 
 ## Instructions to run
 
-- Pre-requisites: -  Node.js > V8.x and npm 5.2+ is a minimum requirement.
-
-- < directions to install >
+- Pre-requisites: - Node.js > V8.x and npm 5.2+ is a minimum requirement.
 
 ```bash
 # install dependencies
 npm install
-```
-
-- < directions to execute >
-
-```bash
 
 # serve with hot reload at localhost:8080
 npm run dev
@@ -51,9 +46,10 @@ npm run build
 # test the production build locally
 npm run serve
 
-# run tests with jest and preact-render-spy 
+# run tests with jest and preact-render-spy
 npm run test
 ```
+
 For detailed explanation on how things work, checkout the [CLI Readme](https://github.com/developit/preact-cli/blob/master/README.md).
 
 ## Contributors
