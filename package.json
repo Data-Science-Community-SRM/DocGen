@@ -26,8 +26,7 @@
     "jest-preset-preact": "^1.0.0",
     "preact-cli": "^3.0.0-rc.6",
     "preact-render-spy": "^1.2.1",
-    "sirv-cli": "^0.4.5",
-    "heroku-postbuild": "webpack -p --config ./config/webpack.prod.config.js"
+    "sirv-cli": "^0.4.5"
   },
   "dependencies": {
     "bootstrap": "^4.5.1",
