@@ -5,11 +5,9 @@ export const EditContext = React.createContext();
 
 const EditContextProvider = (props) => {
   const aImagePrefix = "../../assets/";
-  const ImageNameMap = {"Ruled1": "Ruled1.png","Ruled2": "Ruled2.jpg", 
-  "OnlyMargin":"OnlyMargin.jpg","Blank1":"Blank1.png","Blank2":"Blank2.jpg"};
+  const [pageSrc, setPageSrc] = useState(`${aImagePrefix}onlymargin.jpg`);
   const [isBody, setIsBody] = useState(true);
 
-  const [pageSrc, setPageSrc] = useState(`${aImagePrefix}OnlyMargin.jpg`);
   const [headValues, setHeadValues] = useState({
     headSize: null,
     headTop: null,
@@ -17,7 +15,6 @@ const EditContextProvider = (props) => {
     headLine: null,
     headFont: "HomemadeApple",
   });
-
   const [bodyValues, setBodyValues] = useState({
     bodySize: null,
     bodyTop: null,
@@ -26,15 +23,21 @@ const EditContextProvider = (props) => {
     bodyFont: "HomemadeApple",
   });
 
+  const ImageNameMap = {
+    Ruled1: "ruled1.png",
+    Ruled2: "ruled2.jpg",
+    OnlyMargin: "onlymargin.jpg",
+    Blank1: "blank1.png",
+    Blank2: "blank2.jpg",
+  };
+
   const isBodyHandler = () => {
     setIsBody(!isBody);
   };
 
-  const pageSrcHandler = (e)=>{
-    
-    
+  const pageSrcHandler = (e) => {
     setPageSrc(`${aImagePrefix}${ImageNameMap[e.target.value]}`);
-  }
+  };
 
   const onValueChange = (e) => {
     if (isBody) {
@@ -79,7 +82,6 @@ const EditContextProvider = (props) => {
         isBodyHandler,
         downloadImg,
         pageSrcHandler,
-        
       }}
     >
       {props.children}
