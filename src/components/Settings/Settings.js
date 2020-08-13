@@ -2,7 +2,7 @@ import { useContext } from "react";
 
 import { EditContext } from "../../context/editContext";
 import style from "./Settings.module.css";
-import Example from "../Dropdown/dropdown";
+import Dropdown from "../Dropdown/Dropdown";
 
 const Settings = () => {
   const editContext = useContext(EditContext);
@@ -13,7 +13,7 @@ const Settings = () => {
       <div className={`${style.optionsContainer} p-4 mx-auto col-12`}>
         <div className={`col-12 row mx-auto mt-2 mb-3`}>
           <div className={`col-8 col-lg-6 text-center mx-auto mb-3`}>
-            <Example
+            <Dropdown
               name="Change Style"
               type="font"
               items={[
@@ -35,7 +35,7 @@ const Settings = () => {
             />
           </div>
           <div className={`col-8 col-lg-6 text-center mx-auto mb-3`}>
-            <Example
+            <Dropdown
               name="Change Sheet"
               type="page"
               items={["Ruled1", "Ruled2", "OnlyMargin", "Blank1", "Blank2"]}

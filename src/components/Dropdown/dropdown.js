@@ -1,17 +1,20 @@
-import React, { useState, useContext } from "react";
+import { useState, useContext } from "react";
 import {
   Dropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
 } from "reactstrap";
-import style from "./dropdown.css";
+
+import style from "./Dropdown.module.css";
 import { EditContext } from "../../context/editContext";
 
-const Example = (props) => {
+const DropdownComponent = (props) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const editContext = useContext(EditContext);
   const toggle = () => setDropdownOpen((prevState) => !prevState);
+
+  const editContext = useContext(EditContext);
+
   const DropDownOptions = () => {
     return (
       <div>
@@ -20,7 +23,8 @@ const Example = (props) => {
             onClick={getTargetFunc()}
             name={editContext.isBody ? "bodyFont" : "headFont"}
             value={aItem}
-            style={{"font-family": `${aItem}`}}
+            style={{ "font-family": `${aItem}` }}
+            key={index}
           >
             {aItem}
           </DropdownItem>
@@ -28,10 +32,12 @@ const Example = (props) => {
       </div>
     );
   };
+
   const getTargetFunc = () => {
     if (props.type == "font") return editContext.onValueChange;
     return editContext.pageSrcHandler;
   };
+
   return (
     <Dropdown isOpen={dropdownOpen} toggle={toggle}>
       <DropdownToggle caret class={style.drbtn}>
@@ -44,4 +50,4 @@ const Example = (props) => {
   );
 };
 
-export default Example;
+export default DropdownComponent;

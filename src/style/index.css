@@ -37,6 +37,7 @@
 
 * {
   box-sizing: border-box !important;
+  transition: all 0.3s ease-out;
 }
 
 html {
@@ -51,26 +52,22 @@ body {
   height: 100%;
   color: whitesmoke !important;
 
-
-
   /* overflow-y: hidden; */
 }
 
 .dbtn {
-
   color: #ffffff !important;
 
-  box-shadow: 1px 1px 1px #6F389F;
+  box-shadow: 1px 1px 1px #6f389f;
   padding: 10px 25px;
   border: 2px solid #673494;
-  border-radius: 20px !important; 
-  background: #6F389F;
-
+  border-radius: 20px !important;
+  background: #6f389f;
 }
 .dbtn:hover {
-  color: #6F389F !important;
-  background: #232323 ;
-  border: 2px solid #232323 ;
+  color: #6f389f !important;
+  background: #232323;
+  border: 2px solid #232323;
 }
 @font-face {
   font-family: Ruled1;

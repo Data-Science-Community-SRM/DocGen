@@ -12,11 +12,11 @@ const OutputComponent = () => {
         <div id="outputPage" className={`col-12 mx-auto px-0`}>
           <div className={`${classes.imgContainer} col-12 mx-auto px-0`}>
             <img
-              src={
-                editContext.pageSrc != undefined ? `${editContext.pageSrc}` : ""
-              }
+              src={editContext.pageSrc}
               alt="bg-image"
               className="mx-auto px-0"
+              Width="100%"
+              Height="100%"
             />
           </div>
           <textarea
