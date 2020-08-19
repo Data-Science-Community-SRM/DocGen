@@ -52,11 +52,25 @@ const EditContextProvider = (props) => {
 
   const downloadImg = (e) => {
     e.preventDefault();
-    DomToImage.toPng(document.getElementById("outputPage"))
+
+    const node = document.getElementById("outputPage");
+    const scale = 750 / node.offsetWidth;
+    const options = {
+      height: node.offsetHeight * scale,
+      width: node.offsetWidth * scale,
+      style: {
+        transform: `scale(${scale})`,
+        transformOrigin: "top left",
+        width: `${node.offsetWidth}px`,
+        height: `${node.offsetHeight}px`,
+      },
+    };
+
+    DomToImage.toPng(node, options)
       .then((dataUrl) => {
         const img = new Image();
         img.src = dataUrl;
-        downloadURI(dataUrl, "testImage.png");
+        downloadURI(dataUrl, "generatedDoc.png");
       })
       .catch((error) => {
         console.error("oops,something went wrong", error);
