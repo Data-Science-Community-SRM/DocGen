@@ -29,6 +29,8 @@
     "sirv-cli": "^0.4.5"
   },
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "bootstrap": "^4.5.1",
     "dom-to-image": "^2.6.0",
     "html2canvas": "^1.0.0-rc.5",
