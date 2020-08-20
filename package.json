@@ -29,11 +29,11 @@
     "sirv-cli": "^0.4.5"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-brands-svg-icons": "^5.14.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
     "bootstrap": "^4.5.1",
     "dom-to-image": "^2.6.0",
-    "html2canvas": "^1.0.0-rc.5",
     "preact": "^10.3.2",
     "preact-render-to-string": "^5.1.4",
     "preact-router": "^3.2.1",

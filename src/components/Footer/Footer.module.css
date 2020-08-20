@@ -1,0 +1,17 @@
+.pagefooter {
+  background-color: #0e1424;
+}
+
+.link {
+  color: whitesmoke;
+  font-size: 2.5rem;
+  vertical-align: middle;
+}
+.link:hover {
+  color: whitesmoke;
+}
+
+.quote {
+  color: #696969;
+  font-weight: 400;
+}

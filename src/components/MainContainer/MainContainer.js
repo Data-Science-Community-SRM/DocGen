@@ -1,6 +1,5 @@
 import Settings from "../Settings/Settings";
 import Output from "../OutputComponent/Output";
-import Foot from "../FooterComponent/Foot";
 
 const MainContainer = () => {
   return (
@@ -11,8 +10,6 @@ const MainContainer = () => {
       <div className="col-12 col-lg-6 px-0">
         <Output />
       </div>
-
-     <Foot/>
     </div>
   );
 };
